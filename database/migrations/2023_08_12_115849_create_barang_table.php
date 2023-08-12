@@ -15,9 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('nama_barang');
             $table->foreignId('kategori_id');
-            $table->string('supplier');
-            $table->integer('harga_jual');
+            $table->foreignId('supplier_id');
             $table->integer('harga_beli');
+            $table->integer('harga_jual');
+            $table->text('deskripsi');
             $table->timestamps();
         });
     }

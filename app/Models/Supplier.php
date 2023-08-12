@@ -6,13 +6,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Kategori extends Model
+class Supplier extends Model
 {
     use HasFactory;
-    protected $table = 'kategori';
-    protected $fillable = ['kategori'];
+    protected $table = 'supplier';
+    protected $fillable = ['nama_perusahaan', 'alamat', 'telepon'];
 
-    public function barang(): HasMany
+    public function barang():HasMany
     {
         return $this->hasMany(Barang::class);
     }
